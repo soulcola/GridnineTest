@@ -48,7 +48,7 @@ class FlightFiltersTest {
     @Test
     public void isTotalGroundTimeNotExceedTwoHours() {
         List<Flight> expected = flights.stream()
-                .filter(FlightFilters.totalGroundTimeNotExceedTwoHours())
+                .filter(FlightFilters.isTotalGroundTimeNotExceedTwoHours())
                 .toList();
 
         expected.forEach(flight -> {

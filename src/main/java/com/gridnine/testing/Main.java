@@ -27,7 +27,7 @@ public class Main {
         System.out.println("=======================================");
 
         // Filter 3: more than two hours ground time
-        Predicate<Flight> groundTimeFilter = FlightFilters.totalGroundTimeNotExceedTwoHours();
+        Predicate<Flight> groundTimeFilter = FlightFilters.isTotalGroundTimeNotExceedTwoHours();
         List<Flight> filteredGroundTime = flights.stream()
                 .filter(groundTimeFilter)
                 .toList();

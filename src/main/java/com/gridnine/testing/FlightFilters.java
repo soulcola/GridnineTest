@@ -20,7 +20,7 @@ public class FlightFilters {
                 .noneMatch(segment -> segment.getArrivalDate().isBefore(segment.getDepartureDate()));
     }
 
-    public static Predicate<Flight> totalGroundTimeNotExceedTwoHours() {
+    public static Predicate<Flight> isTotalGroundTimeNotExceedTwoHours() {
         return flight -> {
             if (flight.getSegments().size() <= 1) {
                 return true;
